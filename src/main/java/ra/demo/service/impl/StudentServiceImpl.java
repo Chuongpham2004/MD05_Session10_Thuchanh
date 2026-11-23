@@ -4,7 +4,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import ra.demo.model.entity.Student;
 import ra.demo.repository.StudentRepository;
@@ -22,13 +21,6 @@ public class StudentServiceImpl implements StudentService {
 
     @Override
     public Student insertStudent(Student student) {
-        Sort sort;
-        Pageable pageable;
-
-        sort = Sort.by("fullName").descending();
-        pageable = PageRequest.of(0,10,sort);
         return studentRepository.save(student);
     }
-
-
 }
