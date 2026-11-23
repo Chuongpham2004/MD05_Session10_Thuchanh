@@ -1,0 +1,9 @@
+.git
+.github
+.gradle
+.idea
+build
+*.iml
+HELP.md
+.env
+docker-compose.yml
